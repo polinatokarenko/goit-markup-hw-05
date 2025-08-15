@@ -507,6 +507,7 @@ button {
 
 .footer-subs-form {
     margin-right: 159px;
+    gap: 24px;
     
 }
 
@@ -528,15 +529,15 @@ button {
     font-size: 12px;
     line-height: 2;
     letter-spacing: 0.04em;
-    color: #fff;
-    margin-right: 24px;
+    color: #ffffff;
+    padding-left: 16px;
 }
 
 .footer-subs-input::placeholder {
     font-size: 12px;
     line-height: 2;
     letter-spacing: 0.04em;
-    color: #fff;
+    color: #ffffff;
 }
 
 .footer-subs-inputemail-container {
@@ -545,24 +546,30 @@ button {
 
 .footer-subs-button {
     background-color: #4d5ae5;
+    border: none;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: row;
+    font-family: "Roboto", sans-serif;
+    font-size: 16px;
     gap: 16px;
     border-radius: 4px;
     padding: 8px 24px;
-    width: 165px;
+    min-width: 165px;
     height: 40px;
     font-weight: 500;
+    line-height: 1.5;
     letter-spacing: 0.04em;
     text-align: center;
-    color: #fff;
+    color: #ffffff;
+    cursor: pointer;
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .footer-send-icon {
     fill: #fff;
+    margin-left: 16px;
 }
 
 .footer-subs-button:hover,
@@ -580,25 +587,29 @@ button {
     background-color: rgba(46, 47, 66, 0.4);
     opacity: 0;
     pointer-events: none;
-    transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), pointer-events 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .contact-form-overlay.is-open {
     opacity: 1;
+    visibility: visible;
     pointer-events: all;
 }
 
 .contact-form-modal {
     position: absolute;
     width: 408px;
+    min-height: 584px;
     bottom: 8px;
+    top: 50%;
     left: 50%;
-    transform: translateX(-50%);
-    padding: 24px;
+    transform: translate(-50%, -50%);
+    padding: 72px 24px 24px 24px;
     border-radius: 4px;
     box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 1px 3px 0 rgba(0, 0, 0, 0.12), 0 2px 1px 0 rgba(0, 0, 0, 0.2);
     background-color: #fcfcfc;
     overflow: auto;
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .contact-form-cancel-button {
@@ -615,12 +626,21 @@ button {
     display: flex;
     align-items: center;
     justify-content: center;
-    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.contact-form-cancel-button:hover {
-    fill: #ffffff;
+.contact-form-cancel-button:hover, .contact-form-cancel-button:focus {
+    border: none;
     background-color: #404bbf;
+}
+
+.contact-form-close-svg {
+    fill: #2e2f42;
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.contact-form-cancel-button:hover > .contact-form-close-svg, .contact-form-cancel-button:focus > .contact-form-close-svg {
+    fill: #ffffff;
 }
 
 .contact-form-paragraph {
@@ -646,7 +666,7 @@ button {
     font-size: 12px;
     line-height: 1.16667;
     letter-spacing: 0.04em;
-    outline: none;
+    outline: transparent;
     transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -683,11 +703,12 @@ button {
     resize: none;
     padding: 8px 16px;
     font-size: 12px;
-    line-height: 1.16667;
+    line-height: 1.17;
     letter-spacing: 0.04em;
-    color: #2E2F42;
+    color: rgba(46, 47, 66, 0.4);
+    background-color: transparent;
     font-size: 12px;
-    outline: none;
+    outline: transparent;
     transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -706,10 +727,10 @@ button {
 .contact-form-label {
     display: block;
     font-size: 12px;
-    line-height: 1.16667;
     letter-spacing: 0.04em;
     color: #8e8f99;
     margin-bottom: 4px;
+    line-height: 1.17;
 }
 
 .contact-form-checkbox-wrapper {
@@ -725,11 +746,14 @@ button {
     border-radius: 2px;
     border: 1px solid rgba(46, 47, 66, 0.4);
     margin-right: 8px;
-    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    fill: transparent;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1), fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .contact-form-checkbox-input:checked + .contact-form-checkbox-label > .contact-form-custom-checkbox {
     background-color: #404bbf;
+    border: none;
+    fill: var(--cloud);
 }
 
 .contact-form-checkbox-input:focus + .contact-form-checkbox-label > .contact-form-custom-checkbox {
@@ -749,19 +773,16 @@ button {
 
 .contact-form-checkbox-label {
     font-size: 12px;
-    line-height: 1.16667;
+    line-height: 1.17;
     letter-spacing: 0.04em;
     color: #8e8f99;
-}
-
-.contact-form-checkbox-label-span {
-    line-height: 1.33333;
-    color: #4d5ae5;
 }
 
 .contact-form-checkbox-label-link {
     text-decoration: underline;
     text-decoration-skip-ink: none;
+    line-height: 1.33333;
+    color: var(--iris);
 }
 
 .contact-form-submit-button {
@@ -775,6 +796,8 @@ button {
     background: #4d5ae5;
     font-weight: 500;
     letter-spacing: 0.04em;
+    line-height: 1.5;
+    border: none;
     text-align: center;
     color: #fff;
     cursor: pointer;

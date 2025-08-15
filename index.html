@@ -468,25 +468,21 @@
           </ul>
         </div>
 
-        <div class="footer-subs-form">
-          <p class="footer-subs-text">Subscribe</p>
-          <form>
-            <div class="footer-subs-inputemail-container">
-              <input
-                class="footer-subs-input"
-                name="users_email_for_subscribe"
-                type="email"
-                placeholder="E-mail"
-              />
-              <button class="footer-subs-button" type="submit">
-                Subscribe
-                <svg class="footer-send-icon" width="24" height="20">
-                  <use href="./images/icons.svg#icon-icon-send"></use>
-                </svg>
-              </button>
-            </div>
-          </form>
-        </div>
+        <form class="footer-subs-form">
+          <label class="footer-subs-text">Subscribe
+            <input
+              class="footer-subs-input"
+              name="users_email_for_subscribe"
+              type="email"
+              placeholder="E-mail"
+            />
+            <button class="footer-subs-button" type="submit">
+              Subscribe
+              <svg class="footer-send-icon" width="24" height="24">
+                <use href="./images/icons.svg#icon-icon-send"></use>
+              </svg>
+            </button>
+        </form>
       </div>
     </footer>
 
@@ -504,15 +500,15 @@
         </p>
         <form>
           <div class="contact-form-input-wrapper">
-            <label class="contact-form-label" for="name">Name</label>
+            <label class="contact-form-label" for="user-name">Name</label>
             <div class="contact-form-inputsvg-wrapper">
               <input
                 class="contact-form-input"
-                id="name"
+                id="user-name"
                 type="text"
-                name="users_name"
+                name="user-name"
               />
-              <svg class="contact-form-svgs" width="18" height="18">
+              <svg class="contact-form-svgs" width="18" height="24">
                 <use href="./images/icons.svg#icon-person-black"></use>
               </svg>
             </div>
@@ -546,22 +542,23 @@
             </div>
           </div>
           <div class="contact-form-textarea-wrapper">
-            <label class="contact-form-label" for="comment">Comment</label>
+            <label class="contact-form-label" for="user-comment">Comment</label>
             <textarea
               class="contact-form-textarea"
-              id="comment"
+              id="user-comment"
               placeholder="Text input"
-              name="users_comment"
+              name="user-comment"
             ></textarea>
           </div>
           <div class="contact-form-checkbox-wrapper">
             <input
               class="contact-form-checkbox-input visually-hidden"
               type="checkbox"
-              id="agreement"
-              name="agreement_to_privacy_policy"
+              id="user-privacy"
+              name="user-privacy"
+              value="true"
             />
-            <label class="contact-form-checkbox-label" for="agreement">
+            <label class="contact-form-checkbox-label" for="user-privacy">
               <span class="contact-form-custom-checkbox">
                 <svg
                   class="contact-form-custom-checkbox-svg"
@@ -572,11 +569,9 @@
                 </svg>
               </span>
               I accept the terms and conditions of the
-              <span class="contact-form-checkbox-label-span">
                 <a class="contact-form-checkbox-label-link" href=""
                   >Privacy Policy</a
                 >
-              </span>
             </label>
           </div>
           <button
