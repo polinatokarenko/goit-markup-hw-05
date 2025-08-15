@@ -505,16 +505,21 @@ button {
     fill: #f4f4fd;
 }
 
-.footer-subs-form {
+.footer-subs-div-form {
     margin-right: 159px;
+}
+
+.footer-subs-form {
+    display: flex;
     gap: 24px;
-    
 }
 
 .footer-subs-text {
     font-weight: 500;
-    color: #fff;
+    color: #ffffff;
     margin-bottom: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
 }
 
 .footer-subs-input {
